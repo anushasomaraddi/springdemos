@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:p="http://www.springframework.org/schema/p"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context.xsd">
+
+ <bean name="emp1" class="com.examples.S01springcoreapp.Employee">
+  <property name="id" value="02">
+
+
+</property>
+
+ <property name="name">
+<value>John</value>
+
+</property>
+ </bean>
+
+ <bean name="emp2" class="com.examples.S01springcoreapp.Employee">
+  <property name="id" value="03"/>
+
+
+
+
+ <property name="name" value="max"/>
+
+
+
+ </bean>
+ <bean name="emp3" class="com.examples.S01springcoreapp.Employee" p:id="3" p:name="kein">
+ </bean>
+ 
+ <bean name="emp4" class="com.examples.S01springcoreapp.Employee" p:id="4" p:name="Smith">
+ <property name="departments">
+ <list>
+ <value>HR</value>
+ <value>Admin</value>
+ <value>Sales</value>
+ 
+ </list>
+ </property>
+ </bean>
+ 
+  <bean name="emp5" class="com.examples.S01springcoreapp.Employee" p:id="5" p:name="Jonathan">
+ <property name="products">
+ <map>
+ <entry key="100" value="Laptop" />
+ <entry key="200" value="phone" />
+ <entry key="300" value="TV" />
+
+ 
+ </map>
+ </property>
+ </bean>
+ 
+ 
+  <bean name="emp6" class="com.examples.S01springcoreapp.Employee" p:id="6" p:name="Amy">
+ <property name="countriesLanguages">
+ <props>
+ <prop key="USA">English </prop>
+ <prop key="Canada">French</prop>
+ <prop key="GErmany">German</prop>
+
+ 
+ </props>
+ </property>
+ </bean>
+ 
+  <bean name="address1" class="com.examples.S01springcoreapp.Address" p:city="dwd" p:state="ka" p:pincode="0800" />
+ <bean name="emp7" class="com.examples.S01springcoreapp.Employee" p:id="7" p:name="michel">
+ <property name="address">
+<ref  bean="address1"/>
+ </property>
+ </bean>
+ 
+</beans>
+
